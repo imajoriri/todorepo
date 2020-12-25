@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "name": "@missue/sync-cr",
+  "version": "1.0.0",
+  "description": "Sync Cross Reference Issues",
+  "keywords": [
+    "github",
+    "todo",
+    "issues"
+  ],
+  "homepage": "https://github.com/azu/missue/tree/master/",
+  "bugs": {
+    "url": "https://github.com/azu/missue/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/missue.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/missue.js",
+  "workspaces": [
+    "../../packages/*"
+  ],
+  "scripts": {
+    "start": "ts-node-transpile-only index.ts"
+  },
+  "dependencies": {
+    "@missue/github-client": "^1.0.0"
+  },
+  "devDependencies": {
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}

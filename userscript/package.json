@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "@missue/add-item-to-missue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "parcel build --no-source-maps --no-content-hash add-item-to-missue.user.ts --out-dir ./greasemonkey"
+  },
+  "keywords": [],
+  "author": "azu",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "parcel-plugin-greasemonkey": "^1.0.3",
+    "@types/parse-github-url": "^1.0.0"
+  },
+  "dependencies": {
+    "parse-github-url": "^1.0.2",
+    "@octokit/rest": "^18.0.12"
+  },
+  "browserslist": [
+    "since 2017-06"
+  ]
+}

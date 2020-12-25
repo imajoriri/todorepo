@@ -1,0 +1,26 @@
+name: Sync Cross Reference Issues
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync-cr:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - name: Bootstrap
+        run: |
+          yarn install --production
+      - name: Sync CR
+        run: |
+          yarn install
+          yarn start
+        working-directory: actions/sync-cr
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}
